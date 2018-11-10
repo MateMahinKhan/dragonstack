@@ -1,6 +1,9 @@
-const Dragon = require('./dragon');
+const Generation = require('./generation');
 
-const fooey = new Dragon(new Date(), 'fooey');
-const baloo = new Dragon(new Date(), 'baloo');
+const generation = new Generation();
 
-console.log(fooey, baloo);
+console.log( 'generation', generation);
+
+const gooby = generation.newDragon();
+
+console.log('gooby', gooby);
