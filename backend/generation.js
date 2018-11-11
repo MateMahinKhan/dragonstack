@@ -26,6 +26,13 @@ class Generation {
 
     return new Dragon();
   }
+
+  isExpired() {
+    if (Date.now() > this.expiration) {
+      return true;
+    }
+    return false;
+  }
 }
 
 module.exports = Generation;
