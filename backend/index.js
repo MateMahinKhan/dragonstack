@@ -1,15 +1,15 @@
+const express = require('express');
 const GenerationEngine = require('./generationEngine');
 
+const app = express();
+
 const generationEngine = new GenerationEngine();
+const port = 3000;
 
 generationEngine.start();
 
-setTimeout(() => {
-  generationEngine.stop();
-}, 20000);
+app.get('/dragon/new', (req, res) => {
+  res.json({ dragon: generationEngine.generation.newDragon() });
+});
 
-// console.log( 'generation', generationEngine);
-
-// const gooby = generation.newDragon();
-
-// console.log('gooby', gooby);
+app.listen(port, () => console.log(`Listening on port ${port}`));
