@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+secrets/
 node_modules/
 *_pb.js
 review_server/web/bundle.js
