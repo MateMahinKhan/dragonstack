@@ -1,7 +1,7 @@
 
 echo "Configuring dragonstackdb"
 
-
+set PGPASSWORD=node_password
 dropdb -U node_user dragonstackdb
 createdb -U node_user dragonstackdb
 
@@ -10,4 +10,3 @@ psql -U node_user dragonstackdb < .\\bin\\sql\\dragon.sql
 
 
 echo "Configuration complete dragonstackdb"
-cmd /k
